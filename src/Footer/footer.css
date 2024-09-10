@@ -1,0 +1,80 @@
+/* Make sure the body uses flexbox to manage space */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main content should take up remaining space */
+main {
+  flex: 1;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #007bff;
+  color: white;
+  padding: 1.5rem 0;
+}
+
+/* Footer layout */
+.footer .logo-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer ul li a:hover {
+  color: #ffcc00;
+}
+
+.footer .text-center a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.footer .text-center a:hover {
+  color: #ffcc00;
+}
+
+/* Ensure footer adapts well on small screens */
+@media (max-width: 768px) {
+  .footer .row {
+    text-align: center;
+  }
+  .footer h5 {
+    font-size: 1.15rem;
+  }
+  .footer p, .footer a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .logo-container {
+    width: 80px;
+    height: 80px;
+  }
+  .footer h5 {
+    font-size: 1rem;
+  }
+  .footer p, .footer a {
+    font-size: 0.8rem;
+  }
+}
